@@ -1,0 +1,19 @@
+@import url("./Common/global.css");
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body,
+body > * {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
