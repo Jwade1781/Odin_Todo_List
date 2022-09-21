@@ -1,0 +1,56 @@
+#leftContent {
+    padding: var(--lgPadding);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accentColor3);
+    width: fit-content;
+    gap: var(--lgPadding);
+    border-right: var(--smBorder) solid var(--accentColor1);
+}
+
+#leftContent > div > .listTypeHeader {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 0 0 var(--smPadding);
+    text-shadow: var(--textShadow1);
+}
+
+#leftContent > div > *:not(.listTypeHeader) {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 var(--smPadding);
+    gap: var(--lgPadding);
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#leftContent > div > *  > * {
+    justify-self: center;
+}
+
+#leftContent > div > * > :last-child{
+    margin-left: auto;
+    justify-self: end;
+    color: var(--noticeColor);
+}
+
+#leftContent > div > *:not(.listTypeHeader):hover {
+    background-color: var(--accentColor5);
+    box-shadow: var(--shadowBox1);
+}
+
+#leftContent > button {
+    margin-top: auto;
+    justify-self: flex-end;
+    border-radius: var(--roundBorder);
+    border-color: transparent;
+    padding: var(--smPadding);
+}
+
+#leftContent > button:hover {
+    transition: 0.2s;
+    filter: invert(1);
+}

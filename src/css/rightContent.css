@@ -1,0 +1,8 @@
+#rightContent {
+    margin: 0;
+    padding: var(--lgPadding);
+    background-color: var(--accentColor2);
+    width: 100%;
+    gap: var(--medPadding);
+    border-right: var(--smBorder) solid var(--accentColor1);
+}

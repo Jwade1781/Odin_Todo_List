@@ -1,19 +1,38 @@
 @import url("./Common/global.css");
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url("./header.css");
+@import url("./leftContent.css");
+@import url("./rightContent.css");
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 
 html,
-body,
-body > * {
+body {
     padding: 0px;
     margin: 0px;
     height: 100%;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Lato', sans-serif;
+    color: var(--fontLight);
+
+
 }
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    background-color: var(--accentColor2);
+    filter: blur(2px);
+    filter: brightness(0);
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#content > * {
+    height: calc(100% - (100px));
 }
