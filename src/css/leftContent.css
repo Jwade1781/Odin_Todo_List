@@ -5,7 +5,6 @@
     background-color: var(--accentColor3);
     width: fit-content;
     gap: var(--lgPadding);
-    border-right: var(--smBorder) solid var(--accentColor1);
 }
 
 #leftContent > div > .listTypeHeader {
@@ -52,5 +51,6 @@
 
 #leftContent > button:hover {
     transition: 0.2s;
-    filter: invert(1);
+    animation-fill-mode: forwards;
+    box-shadow: inset 2rem 0 0 var(--accentColor2);
 }

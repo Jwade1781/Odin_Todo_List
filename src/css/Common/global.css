@@ -8,7 +8,7 @@
 	--medPadding: 25px;
 	--lgPadding: 50px;
 
-	--mainColor: #723bf9;
+	--mainColor: #616161;
 
 	--lightColor: #f3f3f3;
 	--darkColor: #222;
@@ -19,7 +19,7 @@
 	--accentColor4: rgb(22, 27, 34);
 	--accentColor5: rgba(0, 0, 0, 0.5);
 
-	--noticeColor: red;
+	--noticeColor: orangered;
 	
 	--fontLight: var(--lightColor);
 	--fontDark: black;

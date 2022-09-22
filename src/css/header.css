@@ -20,3 +20,19 @@
 #logo > h1 {
     font-size: 2em;
 }
+
+#logo > button {
+    margin-left: auto;
+    margin-right: var(--smPadding);
+    justify-self: center;
+    align-self: flex-end;
+    border-radius: var(--roundBorder);
+    border-color: transparent;
+    padding: var(--smPadding);
+}
+
+#logo > button:hover {
+    transition: 0.2s;
+    animation-fill-mode: forwards;
+    box-shadow: inset 2rem 0 0 var(--accentColor2);
+}
