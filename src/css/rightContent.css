@@ -6,3 +6,60 @@
     gap: var(--medPadding);
     border-right: var(--smBorder) solid var(--accentColor1);
 }
+
+#rightContent > * {    margin: 0;}
+#rightContent > :first-child{
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: var(--medPadding);
+}
+
+#rightContent > #taskList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--smPadding);
+}
+
+#rightContent > #taskList > .task {
+    margin: 0;
+    width: 100%;
+    height: 2.1rem;
+    backdrop-filter: blur(20px);
+    
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(25, 21, 30, 0.8);
+    padding: var(--smPadding);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--medPadding);
+    cursor: pointer;
+    position: relative;
+    border-radius: var(--roundBorder);
+}
+
+
+#rightContent > #taskList > .task.finished {
+    filter: opacity(0.4);
+    height: 1rem;
+}
+
+#rightContent > #taskList > .task.finished > img {
+    height: 2rem;
+}
+#rightContent > #taskList > .task.finished::after {
+    position: absolute;
+    left: -1vw;
+    top: 58%;
+    height: 1px;
+    background: black;
+    content: "";
+    width: calc(100% + 2vw);
+    display: block;
+  }
+
+  #rightContent > #taskList > .task:hover {
+    box-shadow: var(--shadowBox2);
+    filter: opacity(1);
+}

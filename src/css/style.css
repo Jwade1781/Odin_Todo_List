@@ -10,11 +10,19 @@ html,
 body {
     padding: 0px;
     margin: 0px;
-    height: 100%;
     width: 100%;
     /*font-family: 'Roboto', sans-serif;*/
     font-family: 'Lato', sans-serif;
     color: var(--fontLight);
+    overflow: visible;
+    position: relative;
+}
+
+html,
+body,
+#content{
+    height: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -28,9 +36,9 @@ body {
 #content {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    position: relative;
 }
 
-#content > * {
-    height: calc(100% - (100px));
+button {
+    cursor: pointer;
 }

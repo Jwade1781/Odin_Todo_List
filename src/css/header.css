@@ -8,6 +8,9 @@
     height: fit-content;
     padding: var(--smPadding) 0;
     background-color: var(--mainColor);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #logo > * { margin: 0;}
