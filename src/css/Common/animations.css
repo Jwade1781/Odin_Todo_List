@@ -36,10 +36,7 @@
 	}
 }
 
-.invertColor:hover{
-	animation: invertColorAnimation 0.3s forwards;
-	animation-iteration-count: 1; 
-}
+
 
 @keyframes invertColorAnimation {
 	100%{

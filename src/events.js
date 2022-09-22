@@ -5,8 +5,13 @@ const events = (() => {
         nightmodeDict = {
             "id": "nightmodeBtn",
             "callback": () => {
-                const bodyClasses = document.body.classList;
-                bodyClasses.contains("invertColor") ? bodyClasses.remove("invertColor") : bodyClasses.add("invertColor");
+                const invertingElements = [
+                    document.body.querySelector("#content").classList,
+                    document.body.querySelector("#logo").classList
+                ]
+
+                for (const element of invertingElements)
+                    element.contains("invertColor") ? element.remove("invertColor") : element.add("invertColor");
             },
             "trigger": "click"
         },
@@ -14,8 +19,13 @@ const events = (() => {
         newProjectDict = {
             "id": "newProjectBtn",
             "callback": () => {
-                const bodyClasses = document.body.classList;
-                bodyClasses.contains("invertColor") ? bodyClasses.remove("invertColor") : bodyClasses.add("invertColor");
+                const invertingElements = [
+                    document.body.querySelector("#content").classList,
+                    document.body.querySelector("#logo").classList
+                ]
+
+                for (const element of invertingElements)
+                    element.contains("invertColor") ? element.remove("invertColor") : element.add("invertColor");
             },
             "trigger": "click"
         },

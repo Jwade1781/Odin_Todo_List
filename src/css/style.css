@@ -42,3 +42,7 @@ body {
 button {
     cursor: pointer;
 }
+
+.invertColor{
+	filter: invert(100%)
+}
