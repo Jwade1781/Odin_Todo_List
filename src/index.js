@@ -1,8 +1,9 @@
 import './css/style.css';
-import {createEventHandlers} from './events.js'
+import domController from './domController'
 
 function main(){
-    createEventHandlers();
+    console.log("Main Start");
+    domController().start();
 }
 
 window.addEventListener("load", () => main());
