@@ -2,14 +2,15 @@ import getEventCallbacks from "./eventCallbacks";
 
 function eventHandlers() {
     const eventCallbacks = getEventCallbacks();
+    let nightmodeBtn, newProjectBtn;
     const eventHandlers = [
-        "nightmodeBtn" = {
+        nightmodeBtn = {
             "id": "nightmodeBtn",
             "callback": eventCallbacks["nightmodeBtn"],
             "trigger": "click"
         },
 
-        "newProjectBtn" = {
+        newProjectBtn = {
             "id": "newProjectBtn",
             "callback": eventCallbacks["newProjectBtn"],
             "trigger": "click"
@@ -17,7 +18,8 @@ function eventHandlers() {
     ];
 
     const createEventHandlers = () => {
-        for (const element of eventHandlers) document.querySelector("#" + element["id"]).addEventListener(element["trigger"], element["callback"])
+        for (const element of eventHandlers)
+            document.querySelector("#" + element["id"]).addEventListener(element["trigger"], element["callback"])
     }
 
     return { createEventHandlers }

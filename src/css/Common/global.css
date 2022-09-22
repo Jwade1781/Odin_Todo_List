@@ -3,10 +3,11 @@
 @import url("styleReset.css");
 
 :root {
-	--xSmPadding: 5px;
-	--smPadding: 10px;
-	--medPadding: 25px;
-	--lgPadding: 50px;
+	--xSmPadding: 0.4vw;
+	--smPadding: 0.8vw;
+	--medPadding: 1vw;
+	--lgPadding: 1.5vw;
+	--xLgPadding: 2.2vw;
 
 	--mainColor: #616161;
 

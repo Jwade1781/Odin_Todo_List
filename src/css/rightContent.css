@@ -1,58 +1,56 @@
 #rightContent {
     margin: 0;
-    padding: var(--lgPadding);
+    padding: var(--xLgPadding);
     background-color: var(--accentColor2);
     width: 100%;
     gap: var(--medPadding);
-    border-right: var(--smBorder) solid var(--accentColor1);
 }
 
 #rightContent > * {    margin: 0;}
 #rightContent > :first-child{
     text-align: center;
-    font-size: 1.7rem;
     margin-bottom: var(--medPadding);
+    font-size: 28px;
 }
 
 #rightContent > #taskList {
     display: flex;
     flex-direction: column;
     gap: var(--smPadding);
+    padding: var(--lgPadding);
+    justify-content: center;
+    align-items: center;
 }
 
 #rightContent > #taskList > .task {
     margin: 0;
     width: 100%;
-    height: 2.1rem;
-    backdrop-filter: blur(20px);
-    
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(25, 21, 30, 0.8);
-    padding: var(--smPadding);
+    padding: var(--medPadding);
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--medPadding);
+    justify-content: center;
+    gap: var(--lgPadding);
     cursor: pointer;
-    position: relative;
-    border-radius: var(--roundBorder);
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 
 #rightContent > #taskList > .task.finished {
     filter: opacity(0.4);
-    height: 1rem;
 }
 
 #rightContent > #taskList > .task.finished > img {
-    height: 2rem;
+    height: 28px;
 }
 #rightContent > #taskList > .task.finished::after {
     position: absolute;
     left: -1vw;
     top: 58%;
-    height: 1px;
+    min-height: 1px;
     background: black;
     content: "";
     width: calc(100% + 2vw);

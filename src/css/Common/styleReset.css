@@ -16,6 +16,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+	margin: 0;
+	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -28,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-min-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -46,29 +48,3 @@ table {
 	border-spacing: 0;
 }
 
-
-
-h1 {
-    font-size: clamp(4rem, -0.875rem + 2vw, 8rem);
-}
-
-h2 {
-    font-size: clamp(1.4rem, -0.875rem + 2vw, 2.4rem);
-}
-
-h3 {
-    font-size: clamp(1.1rem, -0.875rem + 2vw, 2.1rem);
-}
-
-
-h4 {
-    font-size: clamp(1rem, -0.875rem + 2vw, 2rem);
-}
-
-h5 {
-    font-size: clamp(0.9rem, -0.875rem + 2vw, 1.3rem);
-}
-
-h6 {
-    font-size: clamp(0.7rem, -0.875rem + 2vw, 0.9rem);
-}

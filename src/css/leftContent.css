@@ -1,10 +1,12 @@
 #leftContent {
-    padding: var(--lgPadding);
+    margin: 0;
+    padding: var(--lgPadding) var(--xLgPadding);
     display: flex;
     flex-direction: column;
     background-color: var(--accentColor3);
     width: fit-content;
-    gap: var(--lgPadding);
+    min-height: 100vh;
+    gap: var(--xLgPadding);
 }
 
 #leftContent > div {
@@ -15,7 +17,6 @@
 }
 
 #leftContent > div > .listTypeHeader {
-    font-size: 1.7rem;
     text-align: center;
     margin: 0 0 var(--smPadding);
     text-shadow: var(--textShadow1);
@@ -32,8 +33,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 var(--medPadding);
-    gap: var(--lgPadding);
+    padding: var(--smPadding) var(--medPadding);
     transition: 0.1s;
     border-radius: var(--roundBorder);
     cursor: pointer;
@@ -55,16 +55,4 @@
     transition: 0.2s;
     animation-fill-mode: both;
     box-shadow: inset 2rem 20rem 2rem 20rem var(--accentColor5);
-}
-
-#leftContent > button {
-    border-radius: var(--roundBorder);
-    border-color: transparent;
-    padding: var(--smPadding);
-}
-
-#leftContent > button:hover {
-    transition: 0.2s;
-    animation-fill-mode: both;
-    box-shadow: inset 2rem 0 0 var(--accentColor2);
 }
