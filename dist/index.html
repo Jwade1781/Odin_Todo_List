@@ -10,73 +10,89 @@
     <script src="main.js"></script>
 </head>
 
-<body class="">
-    <div id="main">
-        <div id="logoWrapper">
-            <div id="logo"> 
-                <img src="../src/images/logo.png">
-                <h2>To Do</h2>
-                <button id="nightmodeBtn"><h6>Toggle Nightmode</h6></button>
-            </div>
+<body>
+    <div id="content">
+        <div id="topHeader"><img src="../src/images/logo.png">
+            <h1>//To Do</h1>
         </div>
 
-        <div id="content">
-            <div id="leftContent">
-                <div id="calendarDiv">
-                    <h3 class="listTypeHeader">Upcoming</h3>
-                    <div class="active" id="TodayDiv">
-                        <a>Today</a>
-                        <a>(2)</a>
-                    </div>
-                    <div id="WeekDiv">
-                        <a>Week</a>
-                        <a>(3)</a>
-                    </div>
-                    <div id="MonthDiv">
-                        <a>Month</a>
-                        <a>(8)</a>
-                    </div>
+        <div id="leftContainer">
+            <div id="calendarList">
+                <h3>Coming Up</h3>
+                <div class="projectList active">
+                    <h4>Today</h4>
+                    <h4>(2)</h4>
                 </div>
-
-                <div id="projectsDiv">
-                    <h3 class="listTypeHeader">Projects</h3>
-                    <div class="" id="">
-                        <a>Work</a>
-                        <a>(2)</a>
-                    </div>
-                    <div id="">
-                        <a>School</a>
-                        <a>(1)</a>
-                    </div>
+                <div class="projectList">
+                    <h4>Weekly</h4>
+                    <h4>(5)</h4>
                 </div>
-                <button id="newProjectBtn"><h6>New Project</h6></button>
+                <div class="projectList">
+                    <h4>Monthly</h4>
+                    <h4>(10)</h4>
+                </div>
             </div>
 
-            <div id="rightContent">
-                <h1 id="rightContentHeader">Projects</h1>
-                <div id="taskList" class="">
-                    <div class="task current">
-                        <a>Walk the dog</a>
-                        <a>September 12, 2:00pm</a>
+            <div id="projectsList">
+                <h3>Projects</h3>
+                <div class="projectList">
+                    <h4>School</h4>
+                    <h4>(3)</h4>
+                </div>
+                <div class="projectList">
+                    <h4>Work</h4>
+                    <h4>(2)</h4>
+                </div>
+            </div>
+
+            <div id="buttons">
+                <button>
+                    <svg id="addProjectBtn" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                        <path
+                            d="M22.65 34h3v-8.3H34v-3h-8.35V14h-3v8.7H14v3h8.65ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 23.95q0-4.1 1.575-7.75 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24.05 4q4.1 0 7.75 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm.05-3q7.05 0 12-4.975T41 23.95q0-7.05-4.95-12T24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24.05 41ZM24 24Z" />
+                    </svg>
+                </button>
+                <button>
+                    <svg id="darkmodeBtn" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                        <path
+                            d="M24 42q-7.5 0-12.75-5.25T6 24q0-7.5 5.25-12.75T24 6q.4 0 .85.025.45.025 1.15.075-1.8 1.6-2.8 3.95-1 2.35-1 4.95 0 4.5 3.15 7.65Q28.5 25.8 33 25.8q2.6 0 4.95-.925T41.9 22.3q.05.6.075.975Q42 23.65 42 24q0 7.5-5.25 12.75T24 42Zm0-3q5.45 0 9.5-3.375t5.05-7.925q-1.25.55-2.675.825Q34.45 28.8 33 28.8q-5.75 0-9.775-4.025T19.2 15q0-1.2.25-2.575.25-1.375.9-3.125-4.9 1.35-8.125 5.475Q9 18.9 9 24q0 6.25 4.375 10.625T24 39Zm-.2-14.85Z" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+        <div id="rightContainer">
+            <div id="innerContainer">
+                <div id="projects">
+                    <div id="inProgressList">
+                        <h2 class="listHeader">In Progress</h2>
+                        <div class="project inprogress">
+                            <h5>Cook Lunch</h5>
+                            <h5>Sept. 23</h5>
+                            <h5>12:00 PM</h5>
+                        </div>
+
+                        <div class="project inprogress">
+                            <h5>Study Exam</h5>
+                            <h5>Sept. 23</h5>
+                            <h5>11:59 PM</h5>
+                        </div>
                     </div>
 
-                    <div class="task current">
-                        <a>Study for Exam</a>
-                        <a>September 12, 11:59pm</a>
-                    </div>
+                    <div id="finishedLiast">
+                        <h2 class="listHeader">Finished</h2>
+                        <div class="project finished">
+                            <h5>Brush Teeth</h5>
+                            <h5>Sept. 23</h5>
+                            <h5>7:30 AM</h5>
+                        </div>
 
-                    <div class="task finished">
-                        <img src="../src/images/checkmark.png">
-                        <a>Brush Teeth</a>
-                        <a>September 12, 9:45am</a>
+                        <div class="project finished">
+                            <h5>Walk Dog</h5>
+                            <h5>Sept. 23</h5>
+                            <h5>9:30 AM</h5>
+                        </div>
                     </div>
-
-                    <div class="task finished">
-                        <img src="../src/images/checkmark.png">
-                        <a>Take Out Trash</a>
-                        <a>September 12, 1:30pm</a>
-                    </div>
-
                 </div>
             </div>
         </div>

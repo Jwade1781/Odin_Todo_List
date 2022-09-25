@@ -10,20 +10,20 @@
 	--xLgPadding: 2.2vw;
 
 	--mainColor: #616161;
+	--colorWhite: #eee;
+	--colorBlack: #060606;
 
-	--lightColor: #f3f3f3;
-	--darkColor: #222;
-
-	--accentColor1: rgb(22, 27, 34);
-	--accentColor2: rgb(85, 85, 85);
-	--accentColor3: rgb(34,36,38);
-	--accentColor4: rgb(22, 27, 34);
-	--accentColor5: rgba(0, 0, 0, 0.5);
-
-	--noticeColor: orangered;
+	--accentColor1: rgb(34,34,34);
+	--accentColor2: rgb(41,41,41);
+	--accentColor3: rgb(52,52,52);
+	--accentColor4: rgb(77,77,77);
+	--accentColor5: rgba(66,66,66, 0.8);
 	
-	--fontLight: var(--lightColor);
-	--fontDark: black;
+	--colorNotice: orangered;
+	--colorImportant: rgba(255, 0, 0, 0.9);
+
+	--fontLight: #eee;
+	--fontDark: #060606;
 
 	--smRound: 10px;
 	--medRound: calc((var(--smRound) * 2));
@@ -34,15 +34,12 @@
 	--lgBorder: calc((var(--medBorder) * 2));
 	--xlgBorder: calc((var(--lgBorder) * 2));
 
-	--roundTopBottomRightBorder: 0% var(--medRound) var(--medRound) 0%;
 	--roundBorder: var(--lgRound);
 	--circleBorder: 50%;
 
-	--borderHover: var(--lgBorder) solid var(--mainColor);
-
-	--shadowBox1: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-	--shadowBox2: rgba(255, 255, 255, 0.16) 0px 1px 3px, rgba(255, 255, 255, 0.23) 0px 1px 3px;
-	--shadowBox3: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;;
+	--boxShadow1: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	--boxShadow2: rgba(255, 255, 255, 0.16) 0px 1px 3px, rgba(255, 255, 255, 0.23) 0px 1px 3px;
+	--boxShadow3: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;;
 
 	--textShadow1: 2px 2px 3px rgba(0,0,0,0.8);
 }
