@@ -186,14 +186,16 @@ button {
     justify-content: center;
 }
 
-button:hover {
+.buttonSwing {
     transition: 1s;
     animation-fill-mode: both;
     transform: rotate(360deg);
     filter: invert(1);
 }
-
-
+.invertColor {
+    filter: invert(1);
+    transition: 2s;
+}
 
 
 
