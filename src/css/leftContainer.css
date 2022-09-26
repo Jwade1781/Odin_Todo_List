@@ -1,0 +1,70 @@
+#leftContainer {
+    grid-column: 1/3;
+    background-color: var(--accentColor1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--lgPadding);
+}
+
+#leftContainer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--xSmPadding);
+    padding: var(--smPadding) var(--medPadding) var(--smPadding);
+}
+
+#leftContainer > div > div.projectList {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    gap: var(--smPadding);
+    border-radius: var(--roundBorder);
+    background-color: var(--accentColor5);
+    cursor: pointer;
+    padding: var(--xSmPadding) var(--smPadding);
+}
+
+#leftContainer > div > *:first-child{
+    color: var(--colorNotice);
+    font-style: italic;
+    justify-self: center;
+}
+
+#leftContainer > div > div.projectList > * {
+    justify-self: flex-end;
+    margin: 0;
+
+}
+#leftContainer > div > div.projectList > *:last-child{
+    color: var(--colorImportant);
+    margin-left: auto;
+}
+
+#leftContainer > div > div.active,
+#leftContainer > div > div.projectList:hover{
+    background-color: var(--accentColor3);
+    box-shadow: var(--boxShadow1);
+}
+
+#leftContainer > #buttons {
+    display: flex;
+    margin-top: auto;
+    justify-self: flex-end;
+    align-self: center;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--xSmPadding);
+}
+
+#leftContainer > #buttons > svg {
+    padding: var(--xSmPadding);
+    width: 100%;
+    fill:var(--colorWhite);
+    cursor: pointer;
+}
+
+#leftContainer > #buttons > svg:hover{
+    transition: 0.3s;
+    filter: invert(0.5);
+}

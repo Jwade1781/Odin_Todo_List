@@ -1,4 +1,8 @@
+import domController from './domController'
+
 function createEventHandlers() {
+    const domControl = domController();
+
     function createHandler(item) {
         document.querySelector("#" + item["id"]).addEventListener(item["trigger"], item["callback"])
     }
@@ -23,7 +27,7 @@ function createEventHandlers() {
 
         {
             "id": "addProjectBtn",
-            "callback": () => console.log("Add Project Pressed"),
+            "callback": () => domControl.addNewProjectMenu(),
             "trigger": "click"
         },
 

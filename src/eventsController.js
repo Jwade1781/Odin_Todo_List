@@ -2,7 +2,9 @@ import createEventHandlers from './eventHandlers.js'
 
 function eventsController() {
     const createHandlers = () => { return createEventHandlers(); }
-    return { createHandlers }
+    // const resize = (elementID) => $('#content').resizable().draggable(); 
+    
+    return { createHandlers}
 };
 
 export default eventsController;

@@ -1,0 +1,7 @@
+@import url("./leftContainer.css");
+@import url("./rightContainer.css");
+
+#content > #leftContainer,
+#content > #rightContainer {
+    grid-row: 2/11;
+}

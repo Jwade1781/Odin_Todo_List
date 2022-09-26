@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+#rightContainer{
+    grid-column: 3/11;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Rubik Dirt', cursive;
+}
+
+#rightContainer > #innerContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+#rightContainer > #innerContainer > #projects,
+#rightContainer > #innerContainer > #projects > div{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--smPadding);
+    width: 100%;
+}
+
+#rightContainer > #innerContainer > #projects {
+    gap: var(--xLgPadding);
+    align-self: flex-start;
+}
+
+#rightContainer > #innerContainer > #projects > div > h2.listHeader{
+    font-style: italic;
+    text-align: center;
+}
+
+#rightContainer > #innerContainer > #projects > div > div.project{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--smPadding);
+    background-color: var(--accentColor2);
+    padding: var(--smPadding);
+    width: 50%;
+    cursor: pointer;
+}
+
+#rightContainer > #innerContainer > #projects > div > div.finished {
+    opacity: .4;
+}
+
+#rightContainer > #innerContainer > #projects > div > div.project:hover {
+    filter: invert(1);
+    opacity: 1;
+}
+
+
+#rightContainer > #innerContainer > #addProjectMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    padding: var(--xLgPadding);
+    align-items: center;
+    align-self: flex-start;
+    margin-top: var(--xLgPadding);
+}
+
+#rightContainer > #innerContainer > #addProjectMenu > div {
+    width: fit-content;
+    display: flex;
+    gap: var(--medPadding);
+    display: flex;
+    flex-direction: column;
+    margin: var(--medPadding) 0;
+    padding: var(--smPadding);
+}
+
+#rightContainer > #innerContainer > #addProjectMenu > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#rightContainer > #innerContainer > #addProjectMenu > div:last-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+}
+
+#rightContainer > #innerContainer > #addProjectMenu > div > * {
+    width: 100%;
+}

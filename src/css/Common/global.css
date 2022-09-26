@@ -9,18 +9,18 @@
 	--lgPadding: 1.5vw;
 	--xLgPadding: 2.2vw;
 
-	--mainColor: #616161;
+	--mainColor: #20123a;
 	--colorWhite: #eee;
 	--colorBlack: #060606;
 
 	--accentColor1: rgb(34,34,34);
 	--accentColor2: rgb(41,41,41);
-	--accentColor3: rgb(52,52,52);
+	--accentColor3: rgb(76, 56, 56);
 	--accentColor4: rgb(77,77,77);
 	--accentColor5: rgba(66,66,66, 0.8);
 	
 	--colorNotice: orangered;
-	--colorImportant: rgba(255, 0, 0, 0.9);
+	--colorImportant: rgb(246, 255, 0);
 
 	--fontLight: #eee;
 	--fontDark: #060606;

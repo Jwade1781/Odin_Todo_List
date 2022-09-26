@@ -1,0 +1,13 @@
+#mainHeader {
+    grid-column: 1/11;
+    background-color: var(--accentColor4);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+#mainHeader > img {
+    height: 64px;
+    width: auto;
+}
