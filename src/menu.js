@@ -1,13 +1,16 @@
-import domController from "./domController";
+import { events  } from "./eventList";
+export const menuDom = (function () {
 
-function projectsMenuDom() {
-    const projectsList = (projectsMenu) => {
+    const removeElement = (element) => element.parentNode.removeChild(element);
+    const addElement = (element, parent) => parent.appendChild(element);
+
+    const projectsList = () => {
         const setList = (projectList) => projectsList.list = projectList;
-        const getList = () => {return projectsList.list};
-        return {setList, getList};
+        const getList = () => { return projectsList.list };
+        return { setList, getList };
     }
 
-    function addNewProjectMenu() {
+    function toggleProjectMenu() {
         const parent = document.querySelector("#innerContainer");
         const addProjectMenuId = "addProjectMenu";
 
@@ -21,8 +24,12 @@ function projectsMenuDom() {
             addProjectHeader.textContent = "Add a new project";
             addProjectBtn.textContent = "Add Project";
             cancelBtn.textContent = "Cancel";
+            cancelBtn.id = "cancelBtn";
+            addProjectBtn.id = "acceptAddBtn";
+
             buttonsDiv.appendChild(addProjectBtn);
             buttonsDiv.appendChild(cancelBtn);
+            
             addProjectMenu.id = addProjectMenuId;
 
             const createInput = (inputs) => {
@@ -62,17 +69,18 @@ function projectsMenuDom() {
         // the add project menu is not displayed, create and display it
         if (!document.querySelector(`#${addProjectMenuId}`)) {
             projectsList().setList(document.querySelector("#projects"));
-            domController().addElement(createProjectsMenu(), parent);
-            domController().removeElement(projectsList().getList());
+            addElement(createProjectsMenu(), parent);
+            removeElement(projectsList().getList());
+            events.menuButtons();
         }
 
-        else{
-            domController().removeElement(document.querySelector(`#${addProjectMenuId}`));
-            domController().addElement(projectsList().getList(), parent);
+        else {
+            removeElement(document.querySelector(`#${addProjectMenuId}`));
+            addElement(projectsList().getList(), parent);
         }
     }
 
-    return { addNewProjectMenu }
-}
+    return { toggleProjectMenu }
+})();
 
-export default projectsMenuDom;
+export default menuDom;

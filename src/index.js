@@ -1,10 +1,8 @@
 import './css/style.css';
-import eventsController from './eventsController.js';
-import domController from './domController';
-function main(){
-    eventsController().createHandlers();
-    //const domControl = domController();
-    //domControl.addNewProjectMenu();
+import { events } from './eventList';
+
+function main() {
+    events.startup();
 }
 
 window.addEventListener("load", () => main());
