@@ -5,6 +5,13 @@ export const events = (function () {
     const toggleClass = (element, className) =>
         !(element.classList.contains(className)) ? element.classList.add(className) : element.classList.remove(className);
 
+    const toggleAnimation = (element, animationName) => {
+        element.classList.add(animationName);
+        element.addEventListener('animationend', () => {
+            element.classList.remove(animationName); 
+        });
+    }
+
     const startup = function () {
         const darkmodeBtn = domList.createIdElementPair(domList.darkmodeBtn());
         const addProjectBtn = domList.createIdElementPair(domList.addProjectBtn());
@@ -14,7 +21,10 @@ export const events = (function () {
                 "id": darkmodeBtn["id"],
                 "callback": () => {
                     toggleClass(content["element"], "invertColor")
-                    toggleClass(darkmodeBtn["element"], "buttonSwing")
+                    if (content["element"].classList.contains("invertColor"))
+                        toggleAnimation(darkmodeBtn["element"], "buttonSwing")
+                    else
+                        toggleAnimation(darkmodeBtn["element"], "buttonSwingReverse")
                 },
                 "trigger": "click"
             },
@@ -22,7 +32,7 @@ export const events = (function () {
             {
                 "id": addProjectBtn["id"],
                 "callback": () => {
-                    toggleClass(addProjectBtn["element"], "buttonSwing");
+                    toggleAnimation(addProjectBtn["element"], "buttonSwing");
                     domList.toggleMenu();
                 },
                 "trigger": "click"
@@ -35,15 +45,19 @@ export const events = (function () {
 
     const menuButtons = function () {
         const cancelBtn = domList.cancelBtn();
-        createHandler({"id" : cancelBtn, "trigger" : "click", "callback" : () => {
-            domList.toggleMenu();
-        }})
+        createHandler({
+            "id": cancelBtn, "trigger": "click", "callback": () => {
+                domList.toggleMenu();
+            }
+        })
 
         const acceptAddBtn = domList.acceptAddBtn();
-        createHandler({"id" : acceptAddBtn, "trigger" : "click", "callback" : () => {
-            console.log("Project Accepted");
-            domList.toggleMenu();
-        }})
+        createHandler({
+            "id": acceptAddBtn, "trigger": "click", "callback": () => {
+                console.log("Project Accepted");
+                domList.toggleMenu();
+            }
+        })
     };
 
     return { startup, menuButtons };

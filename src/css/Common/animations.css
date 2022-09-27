@@ -1,10 +1,28 @@
 .buttonSwing {
-    transition: 1s;
-    animation-fill-mode: both;
-    transform: rotate(360deg);
+    animation: buttonSwingAnimation 1s forwards;
 }
 
 .invertColor {
-    filter: invert(1);
-    transition: 2s;
+    animation: invertColorAnimation 1s forwards;
+}
+
+.invertColorReverse{
+    animation: invertColorAnimation 1s reverse;
+}
+
+.buttonSwingReverse {
+    animation: buttonSwingAnimation 1s reverse;
+}
+
+@keyframes buttonSwingAnimation {
+    100% {
+        animation-fill-mode: both;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes invertColorAnimation {
+    100% {
+        filter: invert(1);
+    }
 }
